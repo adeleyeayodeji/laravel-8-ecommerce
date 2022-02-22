@@ -1,4 +1,4 @@
 @extends('layouts.app')
 @section('body')
-<h1>Home controller working</h1>
+<h1>Welcome {{auth()->user()->name}}</h1>
 @endsection

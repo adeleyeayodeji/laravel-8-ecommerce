@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'home']);
+Route::get('/auth', [HomeController::class, 'auth']);
+Route::post('/auth/register', [HomeController::class, 'register']);
+Route::post('/auth/login', [HomeController::class, 'login']);
+//make route for dashboard
+Route::get('/dashboard', [User::class, 'dashboard']);
